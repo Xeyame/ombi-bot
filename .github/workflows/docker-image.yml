@@ -26,6 +26,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag xeyame/ombi-bot:$(date +%s)
-    - name: Build the Docker image
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/ombi-bot
+      run: docker build . --file Dockerfile --tag xeyame/ombi-bot:latest
+    - name: Push the Docker image
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/ombi-bot:latest
