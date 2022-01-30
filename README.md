@@ -2,8 +2,8 @@
 # ombi-bot fix
 Clone of Stacktraceyo's ombi bot, that suddenly broke. This fix probably breaks authentication, workaround: /setjoingroups disable at bothfather
 
-Adding to docker hub soon
 https://hub.docker.com/r/xeyame/ombi-bot
+tag:latest is for v4.
 
 
 note - only works with ombi v4
