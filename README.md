@@ -20,7 +20,7 @@ OMBI_USER_NAME=<ombi user name> (OPTIONAL) // ombi user for requests. configure 
 BOT_ADMIN=<admin user id> (OPTIONAL) // admin user id - see authorization section
 BOT_CHAT_ID=<allowed chat id> (OPTIONAL) //  - see authorization section 
 ```
-
-	
+If you are getting "Error 409 on request", Make sure you are not running any other apps/instances on the same bot account.
+ 	
 If someone who can actually write scala would like to fix it, you're welcome :)
 This code is too bad to even PR to upstream.
