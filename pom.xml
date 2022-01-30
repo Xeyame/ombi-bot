@@ -8,7 +8,7 @@
     <groupId>org.stacktrace.yo.plexbot</groupId>
     <artifactId>plex-stackbot</artifactId>
     <packaging>pom</packaging>
-    <version>2.2-SNAPSHOT</version>
+    <version>2.2-OMBI-V4</version>
     <modules>
         <module>ombi-bot</module>
     </modules>
@@ -32,7 +32,7 @@
             <dependency>
                 <groupId>com.bot4s</groupId>
                 <artifactId>telegram-core_2.12</artifactId>
-                <version>4.4.0-RC2</version>
+                <version>5.3.0</version>
             </dependency>
             <dependency>
                 <groupId>com.softwaremill.sttp</groupId>
