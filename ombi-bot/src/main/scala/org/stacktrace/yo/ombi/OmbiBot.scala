@@ -141,7 +141,7 @@ class OmbiBot(val config: BotConfig) extends TelegramBot with Polling with Callb
           }
           else {
             val (avail, results) = resulted(r)
-            val lRes = defaultMessage(availMaker(avail), msg, "*No results available in Plex*")
+            val lRes = defaultMessage(availMaker(avail), msg, "*No results available in Jellyfin*")
             val rRes: (SendMessage, Seq[SendMessage]) = marker(results)
               .map(r => (textMD(s"*Found ${r.length} Search Results*\n\n"), r))
               .getOrElse((noRes, Seq()))
@@ -184,8 +184,8 @@ class OmbiBot(val config: BotConfig) extends TelegramBot with Polling with Callb
               .getOrElse((noRes, Seq()))
 
             Seq(
-              (defaultMessage(mAvailMaker(mAvail), msg, "*No results available in Plex*"), mr),
-              (defaultMessage(tAvailMaker(tAvail), msg, "*No results available in Plex*"), tr)
+              (defaultMessage(mAvailMaker(mAvail), msg, "*No results available in Jellyfin*"), mr),
+              (defaultMessage(tAvailMaker(tAvail), msg, "*No results available in Jellyfin*"), tr)
             )
           }
       )
@@ -350,7 +350,7 @@ class OmbiBot(val config: BotConfig) extends TelegramBot with Polling with Callb
 
   def availableReply(media: String)(implicit msg: Message): AvailMessageMaker = {
     avail: Option[Seq[AvailMediaData]] => {
-      avail.map(a => textMD(s"*Found ${math.min(a.size, 5)} ${media} available in Plex*\n" + a.zipWithIndex.map(s => {
+      avail.map(a => textMD(s"*Found ${math.min(a.size, 5)} ${media} available in Jellyfin*\n" + a.zipWithIndex.map(s => {
         val (availData: AvailMediaData, idx: Int) = s
         s"*${idx + 1}* - ${availData.link}  - ${availData.plexLink}"
       }).mkString("\n")))
